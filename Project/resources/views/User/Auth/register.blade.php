@@ -33,7 +33,7 @@
                     {{-- Email input Field --}}
                     <div class="col-12 d-flex flex-column justify-content-center align-items-start">
                         <div class="col-auto d-flex flex-row justify-content-center align-items-center">
-                            <label >Email</label>
+                            <label >@lang('msg.Email')</label>
                         </div>
                         <div class="col-12 d-flex flex-row justify-content-center align-items-center" >
                             <Input type="email" name="email" value='{{old('email')}}' style="width: 100%" autocomplete required ></Input>
@@ -48,7 +48,7 @@
                     {{-- Password input field --}}
                     <div class="col-12 d-flex flex-column justify-content-center align-items-start">
                         <div class="col-auto d-flex flex-row justify-content-center align-items-center">
-                            <label >Password</label>
+                            <label >@lang('msg.Password')</label>
                         </div>
                         <div class="col-12 d-flex flex-row justify-content-center align-items-center">
                             <Input type="password" name="password" style="width:100%" required autocomplete></Input>
@@ -63,7 +63,7 @@
                     {{-- conferm password field --}}
                     <div class="col-12 d-flex flex-column justify-content-center align-items-start">
                         <div class="col-auto d-flex flex-row justify-content-center align-items-center">
-                            <label >Confirm Password </label>
+                            <label >@lang('msg.register.Confirm Password')</label>
                         </div>
                         <div class="col-12 d-flex flex-row justify-content-center align-items-center">
                             <Input type="password" name="confirmPassword " style="width:100%" required autocomplete></Input>
@@ -81,14 +81,14 @@
                         {{-- button sing up --}}
                         <div class="col-6 d-flex flex-row justify-content-center align-items-center" style="padding: 1vh">
                             <div class="col-12 d-flex flex-row justify-content-center align-items-center" >
-                                <button class="btn btn-primary" style="width:100%">Sing Up</button>
+                                <button class="btn btn-primary" style="width:100%">@lang('msg.register.Sing Up')</button>
                             </div>
                         </div>
 
                         {{-- button sing up with google--}}
                         <div class="col-6 d-flex flex-row justify-content-center align-items-center" style="padding: 1vh">
                             <div class="col-12 d-flex flex-row justify-content-center align-items-center" >
-                                <button class="btn btn-success" style="width: 100%"> Sing Up With google</button>
+                                <button class="btn btn-success" style="width: 100%">@lang('msg.register.Sing Up With google')</button>
                             </div>
                         </div>
 

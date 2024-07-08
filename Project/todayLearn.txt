@@ -1,0 +1,5 @@
+1- in user model => use Illuminate\Contracts\Auth\MustVerifyEmail;
+2- in user model => implements MustVerifyEmail
+3- mailTarp -> Email testing -> inboxes -> my inbox -> code samples -> chose your laravel vergion
+4- copy the configration and edit it in the .env file
+l

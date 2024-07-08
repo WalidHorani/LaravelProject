@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-    <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    @php
+        $dir = session('lang') === 'en'?'ltr':'rtl';
+    @endphp
+    <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir={{$dir }}>
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
