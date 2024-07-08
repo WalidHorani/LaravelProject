@@ -1,6 +1,6 @@
 @extends("General.master")
 @section('Title')
-    Log in
+    Reset Password
 @endsection
 @section('content')
     <div class="row">
@@ -45,31 +45,31 @@
                         </div>
                     </div>
 
-                    <div class="col-12 d-flex flex-row justify-content-center align-items-center" style="margin-top:2vh">
-
-                        {{-- button Log in --}}
-                        <div class="col-6 d-flex flex-row justify-content-center align-items-center" style="padding: 1vh">
-                            <div class="col-12 d-flex flex-row justify-content-center align-items-center" >
-                                <button class="btn btn-primary" style="width:100%">@lang('msg.login.Log in')</button>
-                            </div>
-                        </div>
-
-                        {{-- button Login with google--}}
-                        <div class="col-6 d-flex flex-row justify-content-center align-items-center" style="padding: 1vh">
-                            <div class="col-12 d-flex flex-row justify-content-center align-items-center" >
-                                <button class="btn btn-success" style="width: 100%">@lang('msg.login.Log in With google')</button>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    {{-- forget password link --}}
+                    {{-- conferm password field --}}
                     <div class="col-12 d-flex flex-column justify-content-center align-items-start">
                         <div class="col-auto d-flex flex-row justify-content-center align-items-center">
-                            <a href='#'>@lang('msg.login.Forgot Your Password ?')</a>
+                            <label >@lang('msg.register.Confirm Password')</label>
+                        </div>
+                        <div class="col-12 d-flex flex-row justify-content-center align-items-center">
+                            <Input type="password" name="confirmPassword " style="width:100%" required autocomplete></Input>
+                        </div>
+                        <div class="col-auto d-flex flex-row justify-content-center align-items-center">
+                            @error('confirmPassword')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
+                    <div class="col-12 d-flex flex-row justify-content-center align-items-center" style="margin-top:2vh">
+
+                        {{-- button Rest Password --}}
+                        <div class="col-6 d-flex flex-row justify-content-center align-items-center" style="padding: 1vh">
+                            <div class="col-12 d-flex flex-row justify-content-center align-items-center" >
+                                <button class="btn btn-primary" style="width:100%">@lang('msg.Email Password Reset Link')</button>
+                            </div>
+                        </div>
+
+                    </div>
                 </form>
             </div>
         </div>

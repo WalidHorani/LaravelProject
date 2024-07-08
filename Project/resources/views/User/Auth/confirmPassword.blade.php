@@ -1,6 +1,6 @@
 @extends("General.master")
 @section('Title')
-    Log in
+    Confirm Password
 @endsection
 @section('content')
     <div class="row">
@@ -15,18 +15,12 @@
             <div class="col-5 d-flex flex-row justify-content-center align-items-center" style="padding : 2vh 2vw; background-color: wheat; border-radius:10px ">
                 <form class="col-12">
 
-                    {{-- Email input Field --}}
+                    {{-- pargrahp --}}
                     <div class="col-12 d-flex flex-column justify-content-center align-items-start">
                         <div class="col-auto d-flex flex-row justify-content-center align-items-center">
-                            <label >@lang('msg.Email')</label>
-                        </div>
-                        <div class="col-12 d-flex flex-row justify-content-center align-items-center" >
-                            <Input type="email" name="email" value='{{old('email')}}' style="width: 100%" autocomplete required ></Input>
-                        </div>
-                        <div class="col-auto d-flex flex-row justify-content-center align-items-center">
-                            @error('email')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
+                            <label>
+                                @lang('msg.confirm.This is a secure area of the application. Please confirm your password before continuing.')
+                            </label>
                         </div>
                     </div>
 
@@ -47,27 +41,14 @@
 
                     <div class="col-12 d-flex flex-row justify-content-center align-items-center" style="margin-top:2vh">
 
-                        {{-- button Log in --}}
+                        {{-- button Confirm --}}
                         <div class="col-6 d-flex flex-row justify-content-center align-items-center" style="padding: 1vh">
                             <div class="col-12 d-flex flex-row justify-content-center align-items-center" >
-                                <button class="btn btn-primary" style="width:100%">@lang('msg.login.Log in')</button>
+                                <button class="btn btn-primary" style="width:100%">@lang('msg.confirm.Confirm')</button>
                             </div>
                         </div>
 
-                        {{-- button Login with google--}}
-                        <div class="col-6 d-flex flex-row justify-content-center align-items-center" style="padding: 1vh">
-                            <div class="col-12 d-flex flex-row justify-content-center align-items-center" >
-                                <button class="btn btn-success" style="width: 100%">@lang('msg.login.Log in With google')</button>
-                            </div>
-                        </div>
 
-                    </div>
-
-                    {{-- forget password link --}}
-                    <div class="col-12 d-flex flex-column justify-content-center align-items-start">
-                        <div class="col-auto d-flex flex-row justify-content-center align-items-center">
-                            <a href='#'>@lang('msg.login.Forgot Your Password ?')</a>
-                        </div>
                     </div>
 
                 </form>
